@@ -1,0 +1,61 @@
+@prefix ex: <http://t4.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:BloodTest a rdfs:Class .
+
+ex:Disease a rdfs:Class .
+
+ex:Doctor a rdfs:Class .
+
+ex:FamilyHistory a rdfs:Class .
+
+ex:Hospital a rdfs:Class .
+
+ex:MedicalEvent a rdfs:Class .
+
+ex:Medication a rdfs:Class .
+
+ex:Patient a rdfs:Class .
+
+ex:Treatment a rdfs:Class .
+
+ex:DrJones a ex:Doctor ;
+    ex:prescribesMedication ex:Amlodipine .
+
+ex:DrSmith a ex:Doctor ;
+    ex:prescribesMedication ex:Insulin .
+
+ex:John a ex:Patient ;
+    ex:attends ex:GeneralHospital ;
+    ex:hasDisease ex:Diabetes ;
+    ex:undergoesTreatment ex:InsulinTherapy .
+
+ex:Mary a ex:Patient ;
+    ex:attends ex:CityClinic ;
+    ex:hasDisease ex:Hypertension ;
+    ex:undergoesTreatment ex:BloodPressureManagement .
+
+ex:Susan a ex:Patient ;
+    ex:hasDisease ex:Asthma ;
+    ex:hasFamilyHistoryOf ex:Diabetes ;
+    ex:undergoesTreatment ex:AsthmaInhaler .
+
+ex:attends a rdf:Property .
+
+ex:hasDisease a rdf:Property .
+
+ex:hasDoctor a rdf:Property .
+
+ex:hasFamilyHistoryOf a rdf:Property .
+
+ex:prescribesMedication a rdf:Property .
+
+ex:undergoesTest a rdf:Property .
+
+ex:undergoesTreatment a rdf:Property .
+
+ex:CityClinic a ex:Hospital .
+
+ex:GeneralHospital a ex:Hospital .
+
